@@ -1,0 +1,133 @@
+/*
+    Theme Name: Tienda de seguridad
+    Theme URI: http://minegocioenlinea.com
+    Author: The Gunshot D
+    Author URI: http://minegocioenlinea.com
+    Description: Este tema es un tema que yo empece a desarrollar
+                 con 2 objetivos: 1) Practicar lo aprendido en los libros de WP
+                 2) Comenzar mi negocio en line
+    Version: 0.1
+    License: GNU General Public License v2 or later
+    License URI: http://www.gnu.org/licenses/gpl-2.0.html
+    Tags: black, brown, orange, tan, white, yellow, light, one-column, two-columns, right-sidebar,         flexible-width, custom-header, custom-menu, editor-style, featured-images, microformats,         post-formats, rtl-language-support, sticky-post, translation-ready
+    Text Domain: tienda de seguridad
+    This theme, like WordPress, is licensed under the GPL.
+    Use it to make something cool, have fun, and share what you’ve learned with others.
+*/
+header{
+    position: relative;
+    left: 0;
+    border: 1px solid black;
+}
+
+
+.banner{             
+    width: 100%;    
+    height: auto;    
+    min-height: 196px;
+}
+
+nav{
+    
+    position: absolute !important;
+    width: 100%;
+    top: 0;
+    left: 0px;       
+    z-index: 2;
+}
+
+.center-brand{
+    position: absolute;
+    left: 50%;
+    top: 90px;
+    transform: translate(-50%,-50%);
+}
+
+.dropdown-submenu {
+  position: relative;
+}
+
+.dropdown-submenu a::after {
+  transform: rotate(-90deg);
+  position: absolute;
+  right: 6px;
+  top: .8em;
+}
+
+.dropdown-submenu .dropdown-menu {
+  top: 0;
+  left: 99%;
+  margin-left: .1rem;
+  margin-right: .1rem;   
+}
+
+/*Mi config*/
+.nav-link{
+    color: white !important;
+    font-size: 16px;
+    font-weight: 500 !important;
+    /*font-weight: bold;*/
+}
+.dropdown-submenu .dropdown-menu, .dropdown-menu{
+    
+    background-color: rgba(0,0,0,0.6) !important;    
+    
+}
+.dropdown-submenu .dropdown-menu a, .dropdown-menu a{
+    color: white;
+}
+
+.dropdown-submenu .dropdown-menu a:hover, .dropdown-menu a:hover{
+    background-color: rgba(255,255,255,0.15);
+    color: white;
+}
+
+.dropdown-divider-style{
+    border: 1px solid black;
+    border-top: none; 
+    border-color: rgba(0,0,0,0.7);
+}
+.navbar-toggler{
+    font-size: 14px;
+}
+
+/*Cuando la pantalla es pequeña*/
+@media (max-width: 768px){
+    .banner{
+        margin-top: 44px;
+    }
+    
+    .navbar-toggler{
+        font-size: 12px;
+    }
+    
+    .nav-link{
+        color: grey !important;
+    }
+    
+    .dropdown-submenu .dropdown-menu, .dropdown-menu{
+    
+        background-color: rgb(255,255,255) !important;    
+    
+    }
+    
+    .dropdown-submenu .dropdown-menu a, .dropdown-menu a{
+    color: grey;
+    }
+    
+    .dropdown-submenu .dropdown-menu a:hover, .dropdown-menu a:hover{
+    background-color: rgba(255,255,255,0.15);
+    color: grey;
+    }
+   
+
+}
+
+/*Mi config*/
+body{
+    /*background-color: aqua;*/
+}
+
+.sub-menu{
+    top: 35px;
+}
