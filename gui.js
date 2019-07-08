@@ -16,9 +16,6 @@ $(document).ready(function(){
                 $('nav').removeClass('bg-light');
             }
             
-            //if($('nav').hasClass('logo-nav')){
-              //  $('nav').removeClass('logo-nav');
-            //}
             
             if(!$('nav div.dropdown-divider').hasClass('dropdown-divider-style')){
                 $('nav div.dropdown-divider').addClass('dropdown-divider-style')
@@ -49,41 +46,46 @@ $(document).ready(function(){
     $('li.dropdown-submenu').children('a').addClass('dropdown-toggle');    
     //a los ul dentro de los dropdown menus se le pone la clase dropdown menu
     $('li.dropdown-submenu').children('ul').addClass('dropdown-menu');
-    
-    //Poner el divider a cada indice de los submenus
-    //$('ul#primary-menu').find('a.dropdown-item').not('a.dropdown-toggle').after('<div class="dropdown-divider"></div>');
-        
+
     //Poniendo todos los dividers
-    $('ul#primary-menu').find('li').not('li:last-child').find('a').not('a.dropdown-toggle').after('<div class="dropdown-divider"></dv>');   
-    
+    //$('ul#primary-menu').find('li').not('li:last-child').find('a').not('a.dropdown-toggle').after('<div class="dropdown-divider"></dv>');   
+    $('ul#primary-menu').find('li').not('li:last-child').find('a').after('<div class="dropdown-divider"></dv>');
+        
     //Se le quitan los dividers a los ul mas anidados(ul dentro de ul pero que no contiene ul)
     $('ul#primary-menu ul.dropdown-menu:not(:has("ul.dropdown-menu"))').children('li:last-child').children('div').remove();   
     
+    //quitando los dividers en los li que no contienen nav en el primer nivel
+    $("header nav ul#primary-menu").children('li').children('div.dropdown-divider').remove();        
+        
+    //Quitando el divider al ultimo elemento de los dropdowns de prmer nivel
+    $("header nav ul#primary-menu").find('ul.dropdown-menu').children('li:last-child').children('div.dropdown-divider').remove();
+        
     checkWidth();
     }    
-    navInit();
-    
+    navInit();    
 $(window).resize(function(){
     checkWidth();
-});
-$('a.dropdown-toggle').on('click', function(e) {
-  if (!$(this).next().hasClass('show')) {
-    $(this).parents('.dropdown-menu').first().find('.show').removeClass("show");
-  }
-  var $subMenu = $(this).next(".dropdown-menu");
-  $subMenu.toggleClass('show');
-
-
-  $(this).parents('li.nav-item.dropdown.show').on('hidden.bs.dropdown', function(e) {
-    $('.dropdown-submenu .show').removeClass("show");
-  });
-
+});   
+//Nav funcionamiento para pc
+$('header nav li').has('ul').hover(function() {
+if($(window).width()>768){
+$(this).children('ul').slideDown("fast").addClass("show");
+}
+}, function() {
+    if($(window).width()>768){
+$(this).children('ul').slideUp("fast").removeClass("show");
+    }
+});   
+    
+//Nav funcionamiento para movil  
+$('header nav li').has('ul').on('click', function(e) {
+if($(window).width()<=768){
+$(this).children('ul').slideToggle("fast").toggleClass("show");
+} 
 
   return false;
 });
-    
-    
-    
-    //console.log(document.body.innerHTML);
+
+    console.log(document.body.innerHTML);
 });
     

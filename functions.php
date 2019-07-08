@@ -29,9 +29,9 @@ add_filter( 'nav_menu_link_attributes', 'add_menu_link_class', 1, 3 );
 //Agregando feature de custom header img
 $headerconfig= array(
     'flex-width'=>true,
-    'width'=>1200,
+    'width'=>1600,
     'flex-height'=>true,
-    'height'=>280,    
+    'height'=>340,    
 );
 //Hace que la pagina Header aparezca en el dashboard
 add_theme_support( 'custom-header', $headerconfig );
