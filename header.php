@@ -21,7 +21,7 @@
     <link rel="stylesheet" href="'wp-content\themes\practicando\style.css'">
     <?php wp_head(); ?>
 </head>
-<body class="<?php body_class(); ?>">            
+<body <?php body_class(); ?>>            
 <!--
 <nav class="navbar navbar-expand-lg navbar-light bg-light">
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
@@ -133,5 +133,6 @@
                 </a>
             <?php endif;?>                          
         </header>
-
+<div class="site-content">
+       <br>
         

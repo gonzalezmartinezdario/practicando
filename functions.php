@@ -1,11 +1,47 @@
 <?php 
+// Agregando las areas para widgets seran 3 columnas en el footer
+register_sidebar( array(
+    'name'=>_('Footer columna izquierda'),
+    'id'=>'footer-left-column',
+    'description'=>_('El area de widgets en la columna izquierda del footer'),
+    'before_widget'=>'<li id="%1$s" class="widget-container %2$s">',
+    'after_widget'=>'</li> <br/>',
+    /*'befote_title'=>'<h5>',*/
+    'after_title'=>'<hr/>',    
+)
+);
 
+// Agregando las areas para widgets seran 3 columnas en el footer
+register_sidebar( array(
+    'name'=>_('Footer columna central'),
+    'id'=>'footer-center-column',
+    'description'=>_('El area de widgets en la columna central del footer'),
+    'before_widget'=>'<li id="%1$s" class="widget-container %2$s">',
+    'after_widget'=>'</li> <br/>',
+    /*'befote_title'=>'<h5>',*/
+    'after_title'=>'<hr/>',    
+)
+);
+
+// Agregando las areas para widgets seran 3 columnas en el footer
+register_sidebar( array(
+    'name'=>_('Footer columna derecha'),
+    'id'=>'footer-right-column',
+    'description'=>_('El area de widgets en la columna derecha del footer'),
+    'before_widget'=>'<li id="%1$s" class="widget-container %2$s">',
+    'after_widget'=>'</li> <br/>',
+    /*'befote_title'=>'<h5>',*/
+    'after_title'=>'<hr/>',    
+)
+);
+
+//Registrando el menu primario
 register_nav_menus(
     array(
     'primary-menu' => __( 'Primary Menu' )    
     )
 );
-
+//Tratamiento
 function change_submenu_class($menu) {  
   //$menu = preg_replace('/ class="sub-menu"/','/ class="myclass" /',$menu);  
     $myfile = fopen("newfile.txt", "w") or die("Unable to open file!");

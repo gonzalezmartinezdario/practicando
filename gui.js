@@ -85,6 +85,40 @@ $(this).children('ul').slideToggle("fast").toggleClass("show");
 
   return false;
 });
+    
+$('header nav li a.dropdown-toggle').click(function(){
+    //alert($(this).attr('href'));
+    //alert("toggle")
+    //Si la ventana es chica
+    if($(window).width()<=768){
+        return;
+    }
+    else{
+        //alert("redirigir");
+        document.location.href=$(this).attr('href');
+        
+    }
+    //document.location.href(ruta)
+});
+
+$('header nav li a.dropdown-item').click(function(){
+    //alert("drop item");
+    
+    if($(this).hasClass('dropdown-toggle')){
+        return;
+    }else{
+        //alert("redirigir");
+        document.location.href=$(this).attr('href');
+    }   
+    return;
+    /*if($(window).width()<=768){
+        alert("redirigir");
+    }
+    else{
+        return;
+    }*/
+    
+});
 
     console.log(document.body.innerHTML);
 });

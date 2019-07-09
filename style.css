@@ -14,6 +14,8 @@
     This theme, like WordPress, is licensed under the GPL.
     Use it to make something cool, have fun, and share what you’ve learned with others.
 */
+
+/*Estilos del header*/
 header{
     border: 1px solid;
     border-color: rgba(0,0,0,0);
@@ -34,7 +36,7 @@ header{
     background-repeat: no-repeat;
     background-size: cover;
     position: relative;    
-    border: 1px solid black;
+    /*border: 1px solid black;*/
     
 }
 
@@ -136,10 +138,74 @@ nav{
 }
 
 /*Mi config*/
-body{
-    /*background-color: aqua;*/
-}
-
 .sub-menu{
     top: 35px;
 }
+/*Estilos del header*/
+/*-----------------------------------------------------------------------------------------------*/
+
+/*Estilos del footer*/
+.site-footer{
+   background-color: black;
+}
+.widget-container{
+    list-style: none;
+}
+hr{   
+   
+    margin-top: 0px;
+    padding-top: 5px;
+    border-bottom: 1px solid red;
+}
+.widgettitle{            
+    font-size: 16px;
+}
+.textwidget>span, .textwidget>p{
+
+    font-weight: lighter;
+    margin: 0;
+
+}
+.col-md{  
+    color: white;
+}
+.row{    
+    margin-left: 50px;
+    margin-right: 50px;
+}
+/*Estilos del footer*/
+
+/*Estilos del contenedor central que contendra 
+el contenido que el usuario ponga en la pag*/
+.site-content{
+    width: 100%;
+    min-height: 50vh;    
+}
+/*Estilos del contenedor central que contendra 
+el contenido que el usuario ponga en la pag*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
